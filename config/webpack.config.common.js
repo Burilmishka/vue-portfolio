@@ -9,7 +9,10 @@ const isDev                = process.env.NODE_ENV === 'development';
 const webpackConfig = {
     entry: {
         polyfill: '@babel/polyfill',
-        main: helpers.root('src', 'main'),
+        // main: helpers.root('src', 'main'),
+        // main: ['./src/main.js', './src/css/main.scss'],
+        main: ['./src/js/main.js', './src/css/main.scss'],
+        
     },
     resolve: {
         extensions: [ '.js', '.vue' ],
