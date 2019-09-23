@@ -22,16 +22,20 @@
     justify-content: flex-start;
 
     &__title {
-        width: 100%;
-        max-width: 400px;
-        margin: 0 auto;
-        font-family: "Oswald", sans-serif;
-        font-size: 16px;
-        letter-spacing: 100%;
-        font-weight: bold;
-        color: #acb1a1;
-        text-align: center;
-        padding-top: 40px;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      // font-family: "Oswald", sans-serif;
+      font-family: 'cond-cond',sans-serif ;
+      // font-family: sans-serif;
+      text-transform: uppercase;
+      font-size: 16px;
+      letter-spacing: 100%;
+      font-weight: 700;
+      color: #acb1a1;
+      text-align: center;
+      padding-top: 40px;
+
     }
   }
 

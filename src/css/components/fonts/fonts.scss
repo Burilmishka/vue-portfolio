@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'cond-cond';
+    font-style: normal;
+    font-weight: 400;
+    src:
+        url(/src/fonts/Condor_Condensed/CondorCond-Regular.eot) format('eot'),
+        url(/src/fonts/Condor_Condensed/CondorCond-Regular.eot?#iefix) format('embedded-opentype'), 
+        url(/src/fonts/Condor_Condensed/CondorCond-Regular.eot.woff2) format('woff2'),
+        url(/src/fonts/Condor_Condensed/CondorCond-Regular.eot.woff) format('woff'),
+        url(/src/fonts/Condor_Condensed/CondorCond-Regular.eot.ttf) format('truetype'),
+        url(/src/fonts/Condor_Condensed/CondorCond-Regular.eot.svg) format('svg');
+}
+  
+@font-face {
+    font-family: 'cond-cond';
+    font-style: normal;
+    font-weight: 700;
+    src:
+        url(/src/fonts/Condor_Condensed/CondorCond-Bold.eot) format('eot'),
+        url(/src/fonts/Condor_Condensed/CondorCond-Bold.eot?#iefix) format('embedded-opentype'), 
+        url(/src/fonts/Condor_Condensed/CondorCond-Bold.woff2) format('woff2'),
+        url(/src/fonts/Condor_Condensed/CondorCond-Bold.woff) format('woff'),
+        url(/src/fonts/Condor_Condensed/CondorCond-Bold.ttf) format('truetype'),
+        url(/src/fonts/Condor_Condensed/CondorCond-Regular.svg) format('svg');
+}
