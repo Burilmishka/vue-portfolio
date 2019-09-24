@@ -10,15 +10,15 @@
     </div>
 
     <div class="about__content">
-      <h1 class="about__main-title">I'm Mike Adutskevich.</h1>
-      <h1 class="about__main-title">A Front-end developer focused on reactive technologies & new experiences</h1>
+      <h1 class="about__main-title">I'm Mike Adutskevich. A Front-end developer </h1>
+      <h1 class="about__main-title">focused on reactive technologies & new experiences</h1>
 
       <div class="about__experience">
         <div class="about__experience_title">Experience:</div>
 
-        <div class="about__experience_item">
+        <div class="about__experience_item about__experience_item--highlighted">
           <div class="about__experience_item-main">
-            <span>2019 - nowadays</span>
+            <span>2019-nowadays</span>
             <span>&ndash; BelHard Development LLC - Richbrains</span>
           </div>
           <div
@@ -205,36 +205,34 @@ export default {
       padding: 40px 20px 0 0;
 
       &-text {
-        font-family: "Oswald", sans-serif;
+        font-family: "cond-cond",sans-serif;
+        text-transform: uppercase;
         font-size: 16px;
         letter-spacing: 100%;
-        font-weight: bold;
-        color: #acb1a1;
+        font-weight: 700;
+        color: #c2c3b7;
+        // color: #acb1a1;
       }
     }
   }
 
   &__content {
-    background-color: #f2efe8;
-    padding: 100px 25px 0;
+    background-color: #929786;
+    // background-color: #f2efe8;
+    padding: 140px 15vw 0;
   }
 
   &__main-title {
-    color: #7a816a;
-    font-size: 24px;
-    // font-family: "Oswald", sans-serif;
-    letter-spacing: -0.02rem;
-    font-weight: 100;
-    // font-family: 'Abril Fatface', cursive;
-    font-family: 'Vidaloka', serif;
-    // font-family: 'Libre Baskerville', serif;
-    // font-family: 'Abril Fatface', cursive;
-    // font-family: 'Prata', serif;
-    // font-family: 'IBM Plex Sans Condensed', sans-serif;
-    // font-family: 'Artifika', serif;
-    // font-family: 'Adamina', serif;
-    line-height: 32px;
-    line-height: 28px;
+    color: #c2c3b7;
+    font-size: 10vw;
+    font-family: "cond-cond",sans-serif ;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 10vw;
+
+    &:nth-child(2){
+      color: #f2efe8;   
+    }
   }
 
   &__experience {
@@ -245,28 +243,56 @@ export default {
     padding-top: 40px;
 
     &_title {
-      color: #7a816a;
-      font-size: 18px;
-      font-family: 'Vidaloka', serif;
-      line-height: 24px;
+      color: #f2efe8;
+      font-family: "cond-cond",sans-serif ;
+      font-size: 24px;
+      line-height: 30px;
     }
 
     &_item {
+      padding-top: 10px;
+
       &-main{
         span{
-          color: #7a816a;
-          font-size: 22px;
-          font-family: 'Vidaloka', serif;
+          font-family: 'Roboto Condensed', sans-serif;
+          font-size: 16px;
+          color: #c2c3b7;
           line-height: 26px;
         }
       }
 
       &-description{
+        padding-top: 4px;
         color: #7a816a;
-        font-size: 16px;
-        font-family: "Oswald", sans-serif;
-        line-height: 20px;
+        font-size: 12px;
+        line-height: 16px;
+        padding-left: 40px;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 200;
       }
+
+      &--highlighted{
+        .about__experience_item{
+          &-main{
+            color: #f2efe8;
+
+            span{
+              color: #f2efe8;
+            }
+          }
+
+          &-description{
+            color: #f2efe8;
+          }
+        }
+      }
+
+      // &:nth-child(2){
+      //   background-color: red;
+      //   // .about__experience_item-main{
+      //   //   color: red;
+      //   // }
+      // }
     }
   }
 

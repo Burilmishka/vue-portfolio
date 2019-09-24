@@ -25,9 +25,7 @@
       width: 100%;
       max-width: 400px;
       margin: 0 auto;
-      // font-family: "Oswald", sans-serif;
-      font-family: 'cond-cond',sans-serif ;
-      // font-family: sans-serif;
+      font-family: "cond-cond",sans-serif ;
       text-transform: uppercase;
       font-size: 16px;
       letter-spacing: 100%;
@@ -35,7 +33,6 @@
       color: #acb1a1;
       text-align: center;
       padding-top: 40px;
-
     }
   }
 

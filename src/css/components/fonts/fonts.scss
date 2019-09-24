@@ -1,14 +1,23 @@
 @font-face {
     font-family: 'cond-cond';
     font-style: normal;
+    font-weight: 100;
+    src:
+        url(/src/fonts/Condor_Condensed/CondorCond-Light.woff2) format('woff2'),
+        url(/src/fonts/Condor_Condensed/CondorCond-Light.woff) format('woff'),
+        url(/src/fonts/Condor_Condensed/CondorCond-Light.ttf) format('truetype'),
+        url(/src/fonts/Condor_Condensed/CondorCond-Light.svg) format('svg');
+}
+
+@font-face {
+    font-family: 'cond-cond';
+    font-style: normal;
     font-weight: 400;
     src:
-        url(/src/fonts/Condor_Condensed/CondorCond-Regular.eot) format('eot'),
-        url(/src/fonts/Condor_Condensed/CondorCond-Regular.eot?#iefix) format('embedded-opentype'), 
-        url(/src/fonts/Condor_Condensed/CondorCond-Regular.eot.woff2) format('woff2'),
-        url(/src/fonts/Condor_Condensed/CondorCond-Regular.eot.woff) format('woff'),
-        url(/src/fonts/Condor_Condensed/CondorCond-Regular.eot.ttf) format('truetype'),
-        url(/src/fonts/Condor_Condensed/CondorCond-Regular.eot.svg) format('svg');
+        url(/src/fonts/Condor_Condensed/CondorCond-Regular.woff2) format('woff2'),
+        url(/src/fonts/Condor_Condensed/CondorCond-Regular.woff) format('woff'),
+        url(/src/fonts/Condor_Condensed/CondorCond-Regular.ttf) format('truetype'),
+        url(/src/fonts/Condor_Condensed/CondorCond-Regular.svg) format('svg');
 }
 
 @font-face {
@@ -16,36 +25,30 @@
     font-style: normal;
     font-weight: 700;
     src:
-        url(/src/fonts/Condor_Condensed/CondorCond-Bold.eot) format('eot'),
-        url(/src/fonts/Condor_Condensed/CondorCond-Bold.eot?#iefix) format('embedded-opentype'), 
         url(/src/fonts/Condor_Condensed/CondorCond-Bold.woff2) format('woff2'),
         url(/src/fonts/Condor_Condensed/CondorCond-Bold.woff) format('woff'),
         url(/src/fonts/Condor_Condensed/CondorCond-Bold.ttf) format('truetype'),
         url(/src/fonts/Condor_Condensed/CondorCond-Regular.svg) format('svg');
 }
 
-// @font-face {
-//     font-family: 'cond-cond';
-//     font-style: normal;
-//     font-weight: 100;
-//     src:
-//         url(/src/fonts/Condor_Condensed/CondorCond-Light.eot) format('eot'),
-//         url(/src/fonts/Condor_Condensed/CondorCond-Light.eot?#iefix) format('embedded-opentype'), 
-//         url(/src/fonts/Condor_Condensed/CondorCond-Light.woff2) format('woff2'),
-//         url(/src/fonts/Condor_Condensed/CondorCond-Light.woff) format('woff'),
-//         url(/src/fonts/Condor_Condensed/CondorCond-Light.ttf) format('truetype'),
-//         url(/src/fonts/Condor_Condensed/CondorCond-Light.svg) format('svg');
-// }
+@font-face {
+    font-family: 'ibm-plex-serif';
+    font-style: italic;
+    font-weight: 100;
+    src:
+        url(/src/fonts/ibm-plex-serif/IBMPlexSerif-LightItalic.woff2) format('woff2'),
+        url(/src/fonts/ibm-plex-serif/IBMPlexSerif-LightItalic.woff) format('woff'),
+        url(/src/fonts/ibm-plex-serif/IBMPlexSerif-LightItalic.ttf) format('truetype'),
+        url(/src/fonts/ibm-plex-serif/IBMPlexSerif-LightItalic.svg) format('svg');
+}
 
 @font-face {
-    font-family: 'cond-cond';
+    font-family: 'ibm-plex-serif';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     src:
-        url(/src/fonts/Condor_Condensed/CondorCond-Bold.eot) format('eot'),
-        url(/src/fonts/Condor_Condensed/CondorCond-Bold.eot?#iefix) format('embedded-opentype'), 
-        url(/src/fonts/Condor_Condensed/CondorCond-Bold.woff2) format('woff2'),
-        url(/src/fonts/Condor_Condensed/CondorCond-Bold.woff) format('woff'),
-        url(/src/fonts/Condor_Condensed/CondorCond-Bold.ttf) format('truetype'),
-        url(/src/fonts/Condor_Condensed/CondorCond-Regular.svg) format('svg');
+        url(/src/fonts/ibm-plex-serif/IBMPlexSerif-Medium.woff2) format('woff2'),
+        url(/src/fonts/ibm-plex-serif/IBMPlexSerif-Medium.woff) format('woff'),
+        url(/src/fonts/ibm-plex-serif/IBMPlexSerif-Medium.ttf) format('truetype'),
+        url(/src/fonts/ibm-plex-serif/IBMPlexSerif-Medium.svg) format('svg');
 }

@@ -73,12 +73,17 @@ export default {
             width: 100%;
             max-width: 400px;
             font-family: "Roboto Condensed", sans-serif;
+            // font-family: 'ibm-plex-sans';
             font-style: italic;
             font-size: 16px;
             font-weight: 300;
             color: #acb1a1;
             margin-top: 70px;
             text-align: center;
+
+            p{
+                font-family: 'ibm-plex-sans';
+            }
         }
 
         &__links{
@@ -99,11 +104,11 @@ export default {
                 justify-content: center;
                 align-items: center;
                 text-decoration: none;
-                font-family: "Oswald", sans-serif;
+                font-family: "cond-cond",sans-serif ;
                 font-size: 70px;
                 letter-spacing: normal;
                 line-height: 100%;
-                font-weight: bold;;
+                font-weight: 700;
                 transition: all .3s ease;
                 color: #acb1a1;
 
