@@ -57,20 +57,6 @@
         </div>
       </div>
 
-      <div class="about__education">
-        <div class="about__education_title">Bachelor of Civil Engineering</div>
-        <div class="about__education_description">
-          <div class="about__education_description-university">
-            <span>2010 - 2015</span>
-            <span>&ndash; Belarusian National Technical University</span>
-          </div>
-          <div class="about__education_description-faculty">
-            <span>Faculty:</span>
-            <span>Industrial and civil engineering</span>
-          </div>
-        </div>
-      </div>
-
       <div class="about__courses">
         <div class="about__courses_title">Courses:</div>
 
@@ -157,6 +143,21 @@
             <div class="about__skills_item-main">
               <span>- Photoshop/ Lightroom, figma</span>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__education">
+        <div class="about__education_title">Education:</div>
+        <div class="about__education_name">Bachelor of Civil Engineering</div>
+        <div class="about__education_description">
+          <div class="about__education_description-university">
+            <span>2010 - 2015</span>
+            <span>&ndash; Belarusian National Technical University</span>
+          </div>
+          <div class="about__education_description-faculty">
+            <span>Faculty:</span>
+            <span>Industrial and civil engineering</span>
           </div>
         </div>
       </div>
@@ -296,32 +297,16 @@ export default {
     }
   }
 
-  &__education{
-    &_title{
-      color: #7a816a;
-      font-size: 36px;
-      font-family: "Oswald", sans-serif;
-      line-height: 46px;
-    }
-
-    &_description{
-      color: #7a816a;
-      font-size: 22px;
-      font-family: "Oswald", sans-serif;
-      line-height: 26px;
-    }
-  }
-
   &__courses{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 
     &_title{
-      color: #7a816a;
-      font-size: 22px;
-      font-family: "Oswald", sans-serif;
-      line-height: 26px;
+      color: #f2efe8;
+      font-family: "cond-cond",sans-serif ;
+      font-size: 24px;
+      line-height: 30px
     }
 
     &_item{
@@ -334,10 +319,10 @@ export default {
 
   &__skills{
     &_title{
-      color: #7a816a;
-      font-size: 22px;
-      font-family: "Oswald", sans-serif;
-      line-height: 26px;
+      color: #f2efe8;
+      font-family: "cond-cond",sans-serif ;
+      font-size: 24px;
+      line-height: 30px
     }
 
     &_container{
@@ -363,5 +348,28 @@ export default {
       }
     }
   }
+
+  &__education{
+      &_title{
+        color: #f2efe8;
+        font-family: "cond-cond",sans-serif ;
+        font-size: 24px;
+        line-height: 30p
+      }
+
+      &_name{
+        color: #f2efe8;
+        font-family: "cond-cond",sans-serif ;
+        font-size: 24px;
+        line-height: 30p
+      }
+
+      &_description{
+        color: #7a816a;
+        font-size: 22px;
+        font-family: "Oswald", sans-serif;
+        line-height: 26px;
+      }
+    }
 }
 </style>
