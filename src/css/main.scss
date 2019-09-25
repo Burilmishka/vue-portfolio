@@ -1,5 +1,6 @@
-@import './components/buttons/bottom-buttons';
-@import './components/fonts/fonts.scss';
+@import './helpers/vars.scss';
+@import './components/components.scss';
+
 
 .main-wrapper{
     display: flex;

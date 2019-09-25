@@ -295,26 +295,24 @@ export default {
         // }
       }
 
-      $colour1: #f2efe8;
+      // @for $i from 0 through 4 {
+      //   &:nth-child(#{$i + 2}) {
+      //     // background-color: scale-color($colour1, $lightness: $i*(-15%));
+      //     .about__experience_item{
+      //       &-main{
+      //         color: scale-color($textMain, $lightness: $i*(-10%));
 
-      @for $i from 0 through 4 {
-        &:nth-child(#{$i + 2}) {
-          // background-color: scale-color($colour1, $lightness: $i*(-15%));
-          .about__experience_item{
-            &-main{
-              color: scale-color($colour1, $lightness: $i*(-10%));
+      //         span{
+      //           color: scale-color($textMain, $lightness: $i*(-10%));
+      //         }
+      //       }
 
-              span{
-                color: scale-color($colour1, $lightness: $i*(-10%));
-              }
-            }
-
-            &-description{
-              color: scale-color($colour1, $lightness: $i*(-10%));
-            }
-          }
-        }
-      }
+      //       &-description{
+      //         color: scale-color($textMain, $lightness: $i*(-10%));
+      //       }
+      //     }
+      //   }
+      // }
     }
   }
 
