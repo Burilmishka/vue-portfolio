@@ -1,4 +1,4 @@
-<template>
+git<template>
   <div class="about">
     <div class="about__header">
       <div class="about__header_back">
@@ -272,27 +272,48 @@ export default {
       }
 
       &--highlighted{
-        .about__experience_item{
-          &-main{
-            color: #f2efe8;
+        // .about__experience_item{
+        //   &-main{
+        //     color: #f2efe8;
 
-            span{
-              color: #f2efe8;
+        //     span{
+        //       color: #f2efe8;
+        //     }
+        //   }
+
+        //   &-description{
+        //     color: #f2efe8;
+        //   }
+        // }
+      }
+
+      &:nth-child(2){
+        // background-color: red;
+        // .about__experience_item-main{
+        //   color: red;
+        // }
+      }
+
+      $colour1: #f2efe8;
+
+      @for $i from 0 through 4 {
+        &:nth-child(#{$i + 2}) {
+          // background-color: scale-color($colour1, $lightness: $i*(-15%));
+          .about__experience_item{
+            &-main{
+              color: scale-color($colour1, $lightness: $i*(-10%));
+
+              span{
+                color: scale-color($colour1, $lightness: $i*(-10%));
+              }
             }
-          }
 
-          &-description{
-            color: #f2efe8;
+            &-description{
+              color: scale-color($colour1, $lightness: $i*(-10%));
+            }
           }
         }
       }
-
-      // &:nth-child(2){
-      //   background-color: red;
-      //   // .about__experience_item-main{
-      //   //   color: red;
-      //   // }
-      // }
     }
   }
 
