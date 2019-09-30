@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <!-- <div class="home__title">Mike Adutskevich</div> -->
-
+    <div class="home__title">Mike Adutskevich</div>
     <div class="home__description">
       <p>Front-end developer</p>
       <p>in Minsk, Belarus</p>
@@ -69,17 +69,34 @@ export default {
         justify-content: flex-start;
         align-items: center;
 
+        &__title {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            font-family: "cond-cond",sans-serif ;
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: 100%;
+            font-weight: 700;
+            color: #acb1a1;
+            text-align: center;
+            padding-top: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
         &__description {
             width: 100%;
             max-width: 400px;
             font-family: "Roboto Condensed", sans-serif;
-            // font-family: 'ibm-plex-sans';
             font-style: italic;
             font-size: 16px;
             font-weight: 300;
             color: #acb1a1;
-            margin-top: 70px;
+            margin-top: 10px;
             text-align: center;
+            position: relative;
+            z-index: 1;
 
             p{
                 font-family: 'ibm-plex-sans';

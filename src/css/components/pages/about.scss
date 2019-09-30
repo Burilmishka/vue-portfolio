@@ -1,173 +1,63 @@
 .about {
-    position: absolute;
-    width: 100%;
-    margin: 0 auto;
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #929786;
+
+  &__content {
+    // background-color: #929786;
+    padding: 140px 10vw 50px;
+    // padding: 140px 10vw 50px;
+  }
+
+  &__main-title {
+    color: $textSecondary;
+    font-size: 10vw;
+    font-family: "cond-cond",sans-serif ;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 10vw;
+
+    &:nth-child(2){
+      color: $textMain;   
+    }
+  }
+
+  &__experience {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-  
-    &__header {
-      &_back {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 35px 0 0 20px;
-  
-        &-img {
-          display: block;
-          width: 35px;
-          height: 35px;
-          background-image: url("/src/img/icons/back-button.png");
-          background-repeat: no-repeat;
-          background-size: contain;
-          background-position: center;
-        }
-      }
-  
-      &_name {
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 40px 20px 0 0;
-  
-        &-text {
-          font-family: "cond-cond",sans-serif;
-          text-transform: uppercase;
-          font-size: 16px;
-          letter-spacing: 100%;
-          font-weight: 700;
-          color: $textSecondary;
-        }
-      }
-    }
-  
-    &__content {
-      background-color: #929786;
-      padding: 140px 10vw 50px;
-    }
-  
-    &__main-title {
-      color: $textSecondary;
-      font-size: 10vw;
+    margin-top: 40px;
+
+    &_title {
+      color: $textMain;
       font-family: "cond-cond",sans-serif ;
-      text-transform: uppercase;
-      font-weight: 400;
-      line-height: 10vw;
-  
-      &:nth-child(2){
-        color: $textMain;   
-      }
+      font-size: 24px;
+      line-height: 30px;
     }
-  
-    &__experience {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      margin-top: 40px;
-  
-      &_title {
-        color: $textMain;
-        font-family: "cond-cond",sans-serif ;
-        font-size: 24px;
-        line-height: 30px;
+    
+    &_item {
+      margin-top: 30px;
+
+      &:first-child{
+        margin-top: 10px;
       }
-      
-      &_item {
-        margin-top: 30px;
 
-        &:first-child{
-          margin-top: 10px;
-        }
-  
-        &-main{
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          font-family: 'Roboto Condensed', sans-serif;
-          font-size: 16px;
-          color: $textSecondary;
-          line-height: 22px;
-
-          &-year{
-            white-space: nowrap;
-            width: 100px;
-          }
-
-          &-name{
-            width: calc(100% - 100px);
-            text-align: left;
-          }
-        }
-  
-        &-description{
-          padding-top: 10px;
-          font-size: 11px;
-          line-height: 14px;
-          padding-left: 40px;
-          font-family: 'Roboto Condensed', sans-serif;
-          font-weight: 200;
-          text-align: right;
-        }
-
-        $percent: -7%;
-  
-        @for $i from 0 through 4 {
-          &:nth-child(#{$i+1}) {
-            .about__experience_item{
-              &-main{
-                color: scale-color($textMain, $lightness: $i*($percent));
-  
-                span{
-                  color: scale-color($textMain, $lightness: $i*($percent));
-                }
-              }
-  
-              &-description{
-                color: scale-color($textMain, $lightness: $i*($percent));
-              }
-            }
-          }
-        }
-      }
-    }
-  
-    &__courses{
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      margin-top:  30px;
-  
-      &_title{
-        color: $textMain;
-        font-family: "cond-cond",sans-serif ;
-        font-size: 24px;
-        line-height: 30px
-      }
-  
-      &_item{
-        margin-top: 20px;
+      &-main{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        font-family: 'Roboto Condensed', sans-serif;
         font-size: 16px;
-        font-family: "Oswald", sans-serif;
-        line-height: 20px;
-
-        &:first-child{
-          margin-top: 10px;
-        }
-
-        $percent1: -6%;
-  
-        @for $j from 0 through 5 {
-          &:nth-child(#{$j + 1}) {
-            color: scale-color($textMain, $lightness: $j*($percent1));
-          }
-        }
+        color: $textSecondary;
+        line-height: 22px;
 
         &-year{
+          white-space: nowrap;
           width: 100px;
         }
 
@@ -176,112 +66,179 @@
           text-align: left;
         }
       }
-    }
-  
-    &__skills{
-      &_title{
-        color: $textMain;
-        font-family: "cond-cond",sans-serif ;
-        font-size: 24px;
-        line-height: 30px;
-        margin-top: 30px;
-      }
-  
-      &_container{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-  
-        &-col{
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
 
-          &:first-child{
-            padding-right: 10px;
-          }
-          &:last-child{
-            padding-left: 10px;
-          }
-        }
-      }
-  
-      &_item{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        font-size: 16px;
-        font-family: "Oswald", sans-serif;
-        line-height: 20px;
-        margin-top: 10px;
-
-        &:first-child{
-          margin-top: 10px;
-        }
-
-        &-naame{
-          text-align: left;
-        }
-
-
-        $percent1: -2%;
-
-        @for $j from 0 through 6 {
-          &:nth-child(#{$j + 1}) {
-            color: scale-color($textMain, $lightness: $j*($percent1));
-          }
-        }
-      }
-    }
-  
-    &__education{
-
-      // $percent1: -6%;
-
-      // @for $j from 0 through 5 {
-      //   &:nth-child(#{$j + 1}) {
-      //     color: scale-color($textMain, $lightness: $j*($percent1));
-      //   }
-      // }
-
-      &_title{
-        color: $textMain;
-        font-family: "cond-cond",sans-serif ;
-        font-size: 24px;
-        line-height: 30px;
-        margin-top: 30px;
+      &-description{
+        padding-top: 10px;
+        font-size: 11px;
+        line-height: 14px;
+        padding-left: 40px;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 200;
+        text-align: right;
       }
 
-      &_name{
-        color: $textMain;
-        // font-family: "cond-cond",sans-serif ;
-        font-family: "Oswald", sans-serif;
-        font-size: 20px;
-        line-height: 30px;
-        margin-top: 8px;
-      }
+      $percent: -7%;
 
-      &_description{
-        color: $textMain;
-        font-size: 16px;
-        // font-family: "cond-cond",sans-serif ;
-        font-family: "Oswald", sans-serif;
-        line-height: 22px;
-        margin-top: 10px;
+      @for $i from 0 through 4 {
+        &:nth-child(#{$i+1}) {
+          .about__experience_item{
+            &-main{
+              color: scale-color($textMain, $lightness: $i*($percent));
 
-        &-university, &-faculty{
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
+              span{
+                color: scale-color($textMain, $lightness: $i*($percent));
+              }
+            }
 
-          &-first{
-            width: 100px;
-          }
-
-          &-name{
-            width: calc(100% - 100px);
+            &-description{
+              color: scale-color($textMain, $lightness: $i*($percent));
+            }
           }
         }
       }
     }
   }
+
+  &__courses{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top:  30px;
+
+    &_title{
+      color: $textMain;
+      font-family: "cond-cond",sans-serif ;
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    &_item{
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-family: "Oswald", sans-serif;
+      font-size: 24px;
+      line-height: 30px;
+
+      &:first-child{
+        margin-top: 10px;
+      }
+
+      $percent1: -6%;
+
+      @for $j from 0 through 5 {
+        &:nth-child(#{$j + 1}) {
+          color: scale-color($textMain, $lightness: $j*($percent1));
+        }
+      }
+
+      &-year{
+        width: 100px;
+      }
+
+      &-name{
+        width: calc(100% - 100px);
+        text-align: left;
+      }
+    }
+  }
+
+  &__skills{
+    &_title{
+      color: $textMain;
+      font-family: "cond-cond",sans-serif ;
+      font-size: 24px;
+      line-height: 30px;
+      margin-top: 30px;
+    }
+
+    &_container{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &-col{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        &:first-child{
+          padding-right: 10px;
+        }
+        &:last-child{
+          padding-left: 10px;
+        }
+      }
+    }
+
+    &_item{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      font-size: 16px;
+      font-family: "Oswald", sans-serif;
+      line-height: 20px;
+      margin-top: 10px;
+
+      &:first-child{
+        margin-top: 10px;
+      }
+
+      &-naame{
+        text-align: left;
+      }
+
+
+      $percent1: -2%;
+
+      @for $j from 0 through 6 {
+        &:nth-child(#{$j + 1}) {
+          color: scale-color($textMain, $lightness: $j*($percent1));
+        }
+      }
+    }
+  }
+
+  &__education{
+    &_title{
+      color: $textMain;
+      font-family: "cond-cond",sans-serif ;
+      font-size: 24px;
+      line-height: 30px;
+      margin-top: 30px;
+    }
+
+    &_name{
+      color: $textMain;
+      // font-family: "cond-cond",sans-serif ;
+      font-family: "Oswald", sans-serif;
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: 8px;
+    }
+
+    &_description{
+      color: $textMain;
+      font-size: 16px;
+      // font-family: "cond-cond",sans-serif ;
+      font-family: "Oswald", sans-serif;
+      line-height: 22px;
+      margin-top: 10px;
+
+      &-university, &-faculty{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &-first{
+          width: 100px;
+        }
+
+        &-name{
+          width: calc(100% - 100px);
+        }
+      }
+    }
+  }
+}
