@@ -1,0 +1,91 @@
+.home {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__title {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        font-family: "cond-cond",sans-serif ;
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 100%;
+        font-weight: 700;
+        color: $textLightG;
+        text-align: center;
+        padding-top: 40px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__description {
+        width: 100%;
+        max-width: 400px;
+        font-family: "Roboto Condensed", sans-serif;
+        font-style: italic;
+        font-size: 16px;
+        font-weight: 300;
+        color: $textLightG;
+        margin-top: 10px;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+
+        p{
+            font-family: 'ibm-plex-sans';
+        }
+    }
+
+    &__links{
+        position: absolute;
+        width: 100%;
+        padding-top: 30px;
+        height: calc(100vh - 30px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 0;
+
+        &_link{
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-family: "cond-cond",sans-serif ;
+            font-size: 60px;
+            letter-spacing: normal;
+            line-height: 100%;
+            font-weight: 700;
+            transition: all .3s ease;
+            color: $textLightG;
+
+
+            &:not(:first-child){
+                &:before{
+                    content: "";
+                    position: relative;
+                    display: block;
+                    width: 80%;
+                    height: 1px;
+                    background-color: $textLightG;
+                    margin: 25px 0;
+                }
+            }
+
+            &--active {
+                letter-spacing: .2rem;
+                transition: all .3s ease;
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 <template>
-  <div class="home">
+  <div  class="home"
+        :class="homeClass">
     <!-- <div class="home__title">Mike Adutskevich</div> -->
     <div class="home__title">Mike Adutskevich</div>
     <div class="home__description">
@@ -7,17 +8,15 @@
       <p>in Minsk, Belarus</p>
     </div>
 
-    <div 
-        class="home__links">
-
+    <div class="home__links">
         <router-link    
             v-for="item in linkButtons" 
             class="home__links_link"
-            :key="item.name"
+            :key="item.id"
             :to="item.link"
-            @mouseover.native="hover = item.id"
-            @mouseleave.native="hover = null"
-            :class="{ 'home__links_link--active': hover === item.id }">
+            @mouseover.native="changeVars(item.class, item.id)"
+            @mouseleave.native="textClass = null"
+            >
             {{ item.name }}  
         </router-link>
     </div>
@@ -26,9 +25,21 @@
 
 <script>
 export default {
-    data(){
+    data: () => {
         return {
-            hover: null,
+            textClass: null,
+            homeClass: null,
+        }
+    },
+    methods: {
+        // changeClass(className){
+
+        // },
+        changeVars(homeCl, textCl){
+            this.data.homeClass = homeCl;
+            this.data.textClass = textCl;
+            console.log(textClass);
+
         }
     },
     computed: {
@@ -37,16 +48,19 @@ export default {
                 {
                     link: '/about', 
                     name: 'About',
+                    class: 'home--green',
                     id: 1
                 },
                 {
                     link: '/works', 
                     name: 'Works',
+                    class: 'home--black',
                     id: 2
                 },
                 {
                     link: '/contact', 
                     name: 'Contact',
+                    class: 'home--red',
                     id: 3
                 }
             ]
@@ -54,99 +68,3 @@ export default {
     }
 }
 </script>
-
-
-
-
-
-<style lang="scss" scoped>
-    .home {
-        position: absolute;
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-
-        &__title {
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-            font-family: "cond-cond",sans-serif ;
-            text-transform: uppercase;
-            font-size: 16px;
-            letter-spacing: 100%;
-            font-weight: 700;
-            color: #acb1a1;
-            text-align: center;
-            padding-top: 40px;
-            position: relative;
-            z-index: 1;
-        }
-
-        &__description {
-            width: 100%;
-            max-width: 400px;
-            font-family: "Roboto Condensed", sans-serif;
-            font-style: italic;
-            font-size: 16px;
-            font-weight: 300;
-            color: #acb1a1;
-            margin-top: 10px;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-
-            p{
-                font-family: 'ibm-plex-sans';
-            }
-        }
-
-        &__links{
-            position: absolute;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 0;
-
-            &_link{
-                width: 70%;
-                margin: 0 auto;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-decoration: none;
-                font-family: "cond-cond",sans-serif ;
-                font-size: 70px;
-                letter-spacing: normal;
-                line-height: 100%;
-                font-weight: 700;
-                transition: all .3s ease;
-                color: #acb1a1;
-
-
-                &:not(:first-child){
-                    &:before{
-                        content: "";
-                        position: relative;
-                        display: block;
-                        width: 80%;
-                        height: 1px;
-                        background-color: #acb1a1;
-                        margin: 25px 0;
-                    }
-                }
-
-                &--active {
-                    letter-spacing: .2rem;
-                    transition: all .3s ease;
-                }
-            }
-        }
-    }
-</style>

@@ -6,16 +6,14 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: #929786;
+  background-color: $mainDarkG;
 
   &__content {
-    // background-color: #929786;
-    padding: 140px 10vw 50px;
-    // padding: 140px 10vw 50px;
+    padding: 140px 8vw 50px;
   }
 
   &__main-title {
-    color: $textSecondary;
+    color: $textDarkG;
     font-size: 10vw;
     font-family: "cond-cond",sans-serif ;
     text-transform: uppercase;
@@ -23,7 +21,7 @@
     line-height: 10vw;
 
     &:nth-child(2){
-      color: $textMain;   
+      color: $mainLightG;   
     }
   }
 
@@ -34,7 +32,7 @@
     margin-top: 40px;
 
     &_title {
-      color: $textMain;
+      color: $mainLightG;
       font-family: "cond-cond",sans-serif ;
       font-size: 24px;
       line-height: 30px;
@@ -53,7 +51,7 @@
         justify-content: space-between;
         font-family: 'Roboto Condensed', sans-serif;
         font-size: 16px;
-        color: $textSecondary;
+        color: $textDarkG;
         line-height: 22px;
 
         &-year{
@@ -83,15 +81,15 @@
         &:nth-child(#{$i+1}) {
           .about__experience_item{
             &-main{
-              color: scale-color($textMain, $lightness: $i*($percent));
+              color: scale-color($mainLightG, $lightness: $i*($percent));
 
               span{
-                color: scale-color($textMain, $lightness: $i*($percent));
+                color: scale-color($mainLightG, $lightness: $i*($percent));
               }
             }
 
             &-description{
-              color: scale-color($textMain, $lightness: $i*($percent));
+              color: scale-color($mainLightG, $lightness: $i*($percent));
             }
           }
         }
@@ -106,7 +104,7 @@
     margin-top:  30px;
 
     &_title{
-      color: $textMain;
+      color: $mainLightG;
       font-family: "cond-cond",sans-serif ;
       font-size: 24px;
       line-height: 30px;
@@ -129,24 +127,28 @@
 
       @for $j from 0 through 5 {
         &:nth-child(#{$j + 1}) {
-          color: scale-color($textMain, $lightness: $j*($percent1));
+          color: scale-color($mainLightG, $lightness: $j*($percent1));
         }
       }
 
       &-year{
         width: 100px;
+        font-size: 16px;
+        line-height: 22px;
       }
 
       &-name{
         width: calc(100% - 100px);
         text-align: left;
+        font-size: 16px;
+        line-height: 22px;
       }
     }
   }
 
   &__skills{
     &_title{
-      color: $textMain;
+      color: $mainLightG;
       font-family: "cond-cond",sans-serif ;
       font-size: 24px;
       line-height: 30px;
@@ -194,7 +196,7 @@
 
       @for $j from 0 through 6 {
         &:nth-child(#{$j + 1}) {
-          color: scale-color($textMain, $lightness: $j*($percent1));
+          color: scale-color($mainLightG, $lightness: $j*($percent1));
         }
       }
     }
@@ -202,7 +204,7 @@
 
   &__education{
     &_title{
-      color: $textMain;
+      color: $mainLightG;
       font-family: "cond-cond",sans-serif ;
       font-size: 24px;
       line-height: 30px;
@@ -210,8 +212,7 @@
     }
 
     &_name{
-      color: $textMain;
-      // font-family: "cond-cond",sans-serif ;
+      color: $mainLightG;
       font-family: "Oswald", sans-serif;
       font-size: 20px;
       line-height: 30px;
@@ -219,9 +220,8 @@
     }
 
     &_description{
-      color: $textMain;
+      color: $mainLightG;
       font-size: 16px;
-      // font-family: "cond-cond",sans-serif ;
       font-family: "Oswald", sans-serif;
       line-height: 22px;
       margin-top: 10px;
