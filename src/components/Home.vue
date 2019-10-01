@@ -25,6 +25,8 @@
 </template>
 
 <script>
+
+store = require('../store');
 export default {
     data: () => {
         return {
@@ -33,9 +35,11 @@ export default {
         }
     },
     methods: {
-        changeVars: function(item){
+        changeVars(item){
             this.homeClass = item.class;
             this.textClass = item.id;
+            // this.$emit('mouseOvr', 'fuck');
+            this.$store.commit('updateBgClass', item.class);
         }
     },
     computed: {
