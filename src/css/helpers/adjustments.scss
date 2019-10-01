@@ -4,7 +4,6 @@
 }
 
 .main{
-    background-color: $mainLightG;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -13,8 +12,8 @@
 }
 
 .fade-enter-active, .fade-leave-active{
-    transition: opacity 1s
+    transition: all 1s
 }
 .fade-enter, .fade-leave-to{
-    opacity: 0
+    opacity: 0.5
 }

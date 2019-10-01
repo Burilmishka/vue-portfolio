@@ -14,9 +14,10 @@
             class="home__links_link"
             :key="item.id"
             :to="item.link"
-            @mouseover.native="changeVars(item.class, item.id)"
+            @mouseover.native="changeVars(item)"
             @mouseleave.native="textClass = null"
-            >
+            :class="{'home__links_link--active' : textClass == item.id}">
+            
             {{ item.name }}  
         </router-link>
     </div>
@@ -32,14 +33,9 @@ export default {
         }
     },
     methods: {
-        // changeClass(className){
-
-        // },
-        changeVars(homeCl, textCl){
-            this.data.homeClass = homeCl;
-            this.data.textClass = textCl;
-            console.log(textClass);
-
+        changeVars: function(item){
+            this.homeClass = item.class;
+            this.textClass = item.id;
         }
     },
     computed: {
