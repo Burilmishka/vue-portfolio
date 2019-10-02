@@ -154,30 +154,33 @@ export default {
       offsets: [],
     }
   },
-  // computed: {
-
-
-  // },
   methods: {
     scrollTransition(event){
       let winScrollY = window.pageYOffset + window.innerHeight;
       let transitionEl;
 
+      // for(let i=0; i < this.offsets.length; i++){
+      //   if(i == this.offsets.length - 1){
+      //     // if(winScrollY > this.offsets[i] && winScrollY < this.offsets[i] + 200){
+      //     if(winScrollY > this.offsets[i]){
+      //       transitionEl = document.querySelector(`.${this.blocks[i]}`);
+      //       transitionEl.classList.add('about--transition');
+      //     }
+      //   }else{
+      //     // if(winScrollY > this.offsets[i] && winScrollY < this.offsets[i+1]){
+      //     if(winScrollY > this.offsets[i]){
+      //       transitionEl = document.querySelector(`.${this.blocks[i]}`);
+      //       transitionEl.classList.add('about--transition');
+      //     }
+      //   }
+      // }
+
       for(let i=0; i < this.offsets.length; i++){
-        if(i == this.offsets.length - 1){
-          // if(winScrollY > this.offsets[i] && winScrollY < this.offsets[i] + 200){
-          if(winScrollY > this.offsets[i]){
-            transitionEl = document.querySelector(`.${this.blocks[i]}`);
-            transitionEl.classList.add('about--transition');
-          }
-        }else{
-          // if(winScrollY > this.offsets[i] && winScrollY < this.offsets[i+1]){
-          if(winScrollY > this.offsets[i]){
-            transitionEl = document.querySelector(`.${this.blocks[i]}`);
-            transitionEl.classList.add('about--transition');
-          }
+        if(winScrollY > this.offsets[i]){
+          transitionEl = document.querySelector(`.${this.blocks[i]}`);
+          transitionEl.classList.add('about--transition');
         }
-      } 
+      }
     },
   },
   mounted () {
