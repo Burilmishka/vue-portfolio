@@ -1,6 +1,5 @@
 <template>
-  <div  class="home"
-        :class="homeClass">
+  <div  class="home">
     <!-- <div class="home__title">Mike Adutskevich</div> -->
     <div class="home__title">Mike Adutskevich</div>
     <div class="home__description">
@@ -26,7 +25,6 @@
 
 <script>
 
-store = require('../store');
 export default {
     data: () => {
         return {
@@ -38,7 +36,6 @@ export default {
         changeVars(item){
             this.homeClass = item.class;
             this.textClass = item.id;
-            // this.$emit('mouseOvr', 'fuck');
             this.$store.commit('updateBgClass', item.class);
         }
     },
@@ -48,19 +45,19 @@ export default {
                 {
                     link: '/about', 
                     name: 'About',
-                    class: 'home--green',
+                    class: 'main--green',
                     id: 1
                 },
                 {
                     link: '/works', 
                     name: 'Works',
-                    class: 'home--black',
+                    class: 'main--black',
                     id: 2
                 },
                 {
                     link: '/contact', 
                     name: 'Contact',
-                    class: 'home--red',
+                    class: 'main--red',
                     id: 3
                 }
             ]

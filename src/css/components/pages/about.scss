@@ -7,9 +7,11 @@
   justify-content: flex-start;
   align-items: center;
   background-color: $mainDarkG;
+  overflow: initial;
 
   &__content {
     padding: 140px 8vw 50px;
+    overflow: initial;
   }
 
   &__main-title {

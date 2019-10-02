@@ -32,9 +32,6 @@
         </div>
       </div>
 
-
-
-
       <div class="about__courses">
         <div class="about__courses_title">Courses:</div>
         
@@ -154,7 +151,17 @@ export default {
         'Photoshop/ Lightroom, figma'
       ]
     }
+  },
+  methods: {
+    scrollTransition(event){
+      console.log('scrolling');
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.scrollTransition);
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.scrollTransition);
   }
-  
 };
 </script>

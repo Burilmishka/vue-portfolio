@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: $mainLightG;
+    // background-color: $mainLightG;
 
     &__title {
         width: 100%;
@@ -88,47 +88,5 @@
                 transition: all .3s ease;
             }
         }
-    }
-
-    @mixin rePaint($bgCol, $textCol, $transitionDel){
-        background-color: $bgCol;
-        transition: background-color $transitionDel ease-in-out;
-
-        .home{
-            &__title {
-                color: $textCol;
-                transition: color $transitionDel ease-in-out;
-            }
-
-            &__description {
-                color: $textCol;
-                transition: color $transitionDel ease-in-out;
-            }
-
-            &__links{
-                &_link{
-                    color: $textCol;
-                    transition: all $transitionDel ease-in-out;
-                    &:not(:first-child){
-                        &:before{
-                            background-color: $textCol;
-                            transition: background-color .2s ease-in-out;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    &--green{
-        @include rePaint($mainDarkG, $mainLightG, .3s);
-    }
-
-    &--black{
-        @include rePaint($mainBlack, $mainRed, .3s);
-    }
-
-    &--red{
-        @include rePaint($mainRed, $mainBlack, .3s);
     }
 }

@@ -8,21 +8,17 @@
 
 <script>
 import {mapGetters} from 'vuex'
+
 export default {
-  data() {
-    return {
-    }
-  },
+  // data() {
+  //   return {
+  //   }
+  // },
   methods: {
     onMouseChild(value) {
       console.log(value);
     }
   },
-  // computed: {
-  //   getBgClass(){
-  //     return this.$store.getters.getBgClass;
-  //   }
-  // }
   computed: mapGetters(['getBgClass']),
 }
 </script>>
