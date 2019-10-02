@@ -149,16 +149,47 @@ export default {
         'git',
         'seo(junior)',
         'Photoshop/ Lightroom, figma'
-      ]
+      ],
+      blocks: ['about__experience', 'about__courses', 'about__skills', 'about__education'],
+      offsets: [],
     }
   },
+  // computed: {
+
+
+  // },
   methods: {
     scrollTransition(event){
-      console.log('scrolling');
-    }
+      let winScrollY = window.pageYOffset + window.innerHeight;
+      let transitionEl;
+
+      for(let i=0; i < this.offsets.length; i++){
+        if(i == this.offsets.length - 1){
+          // if(winScrollY > this.offsets[i] && winScrollY < this.offsets[i] + 200){
+          if(winScrollY > this.offsets[i]){
+            transitionEl = document.querySelector(`.${this.blocks[i]}`);
+            transitionEl.classList.add('about--transition');
+          }
+        }else{
+          // if(winScrollY > this.offsets[i] && winScrollY < this.offsets[i+1]){
+          if(winScrollY > this.offsets[i]){
+            transitionEl = document.querySelector(`.${this.blocks[i]}`);
+            transitionEl.classList.add('about--transition');
+          }
+        }
+      } 
+    },
   },
   mounted () {
     window.addEventListener('scroll', this.scrollTransition);
+
+    for(let i=0; i < this.blocks.length; i++){
+      let el = document.querySelector(`.${this.blocks[i]}`);
+      let elOffset = el.offsetTop;
+      this.offsets.push(elOffset);
+    }
+
+
   },
   destroyed () {
     window.removeEventListener('scroll', this.scrollTransition);

@@ -27,11 +27,30 @@
     }
   }
 
+  &--transition{
+    margin-top: 120px;
+    opacity: 1;
+    animation: aboutTrans 1.5s ease .5s forwards;
+
+    @keyframes aboutTrans {
+      0% {
+        margin-top: 120px;
+        opacity: 0;
+      }
+      100% {
+        margin-top: 40px;
+        opacity: 1;
+      }
+    }
+    
+  }
+
   &__experience {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-top: 40px;
+    // margin-top: 40px;
+    opacity: 0;
 
     &_title {
       color: $mainLightG;
@@ -104,6 +123,7 @@
     flex-direction: column;
     justify-content: flex-start;
     margin-top:  30px;
+    opacity: 0;
 
     &_title{
       color: $mainLightG;
@@ -149,6 +169,8 @@
   }
 
   &__skills{
+    opacity: 0;
+
     &_title{
       color: $mainLightG;
       font-family: "cond-cond",sans-serif ;
@@ -205,6 +227,8 @@
   }
 
   &__education{
+    opacity: 0;
+
     &_title{
       color: $mainLightG;
       font-family: "cond-cond",sans-serif ;
