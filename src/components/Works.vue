@@ -28,7 +28,7 @@
       <div class="works__description">
         I'm very curious person. So I'm often trying something new. 
         New technologies, libraries, effects and else to become more competent 
-        and open the mind.
+        and open-minded.
       </div>
     </div>
 
@@ -40,7 +40,10 @@
 <script>
   export default {
     data() {
-      return {}
+      return {
+        blocks: ['works__description'],
+        offsets: [],
+      }
     }, 
     computed: {
       worksItems() {
@@ -79,6 +82,31 @@
           }
         ]
       }
+    },
+    methods: {
+      scrollTransition(event){
+        let winScrollY = window.pageYOffset + window.innerHeight;
+        let transitionEl;
+
+        for(let i=0; i < this.offsets.length; i++){
+          if(winScrollY > this.offsets[i]){
+            transitionEl = document.querySelector(`.${this.blocks[i]}`);
+            transitionEl.classList.add('works--transition');
+          }
+        }
+      },
+    },
+    mounted () {
+      window.addEventListener('scroll', this.scrollTransition);
+
+      for(let i=0; i < this.blocks.length; i++){
+        let el = document.querySelector(`.${this.blocks[i]}`);
+        let elOffset = el.offsetTop;
+        this.offsets.push(elOffset);
+      }
+    },
+    destroyed () {
+      window.removeEventListener('scroll', this.scrollTransition);
     }
   };
 </script>

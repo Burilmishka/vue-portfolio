@@ -156,24 +156,10 @@ export default {
   },
   methods: {
     scrollTransition(event){
-      let winScrollY = window.pageYOffset + window.innerHeight;
+      let winOffsetY = window.pageYOffset;
+      this.backButtonFixer(winOffsetY);
+      let winScrollY = winOffsetY + window.innerHeight;
       let transitionEl;
-
-      // for(let i=0; i < this.offsets.length; i++){
-      //   if(i == this.offsets.length - 1){
-      //     // if(winScrollY > this.offsets[i] && winScrollY < this.offsets[i] + 200){
-      //     if(winScrollY > this.offsets[i]){
-      //       transitionEl = document.querySelector(`.${this.blocks[i]}`);
-      //       transitionEl.classList.add('about--transition');
-      //     }
-      //   }else{
-      //     // if(winScrollY > this.offsets[i] && winScrollY < this.offsets[i+1]){
-      //     if(winScrollY > this.offsets[i]){
-      //       transitionEl = document.querySelector(`.${this.blocks[i]}`);
-      //       transitionEl.classList.add('about--transition');
-      //     }
-      //   }
-      // }
 
       for(let i=0; i < this.offsets.length; i++){
         if(winScrollY > this.offsets[i]){
@@ -182,6 +168,17 @@ export default {
         }
       }
     },
+
+    backButtonFixer(scrollH){
+      let backEl = document.querySelector('.header__back');
+      if(scrollH > 20){
+        backEl.classList.remove('header__back--backfixed');
+        backEl.classList.add('header__back--fixed');
+      }else{
+        backEl.classList.remove('header__back--fixed');
+        backEl.classList.add('header__back--backfixed');
+      }
+    }
   },
   mounted () {
     window.addEventListener('scroll', this.scrollTransition);
@@ -191,8 +188,6 @@ export default {
       let elOffset = el.offsetTop;
       this.offsets.push(elOffset);
     }
-
-
   },
   destroyed () {
     window.removeEventListener('scroll', this.scrollTransition);

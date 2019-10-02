@@ -37,7 +37,7 @@ export default {
             this.homeClass = item.class;
             this.textClass = item.id;
             this.$store.commit('updateBgClass', item.class);
-        }
+        },
     },
     computed: {
         linkButtons(){

@@ -10,6 +10,57 @@
             width: 35px;
             height: 35px;
         }
+
+        &--fixed{
+            animation: backanimation 1s ease forwards;
+
+            @keyframes backanimation {
+                0% {
+                    top: 0;
+                    left: 0;
+                    padding: 35px 0 0 20px;
+                    opacity: 1;
+                }
+                30%{
+                    opacity: 0;
+                }
+                100% {
+                    position: fixed;
+                    top: initial;
+                    left: initial;
+                    right: 0;
+                    bottom: 0;
+                    padding: 0 20px 20px 0;
+                    opacity: 1;
+                }
+            }
+        }
+
+        &--backfixed{
+            animation: backAgainAnimation 1s ease forwards;
+
+            @keyframes backAgainAnimation {
+                0% {
+                    position: fixed;
+                    top: initial;
+                    left: initial;
+                    right: 0;
+                    bottom: 0;
+                    padding: 0 20px 20px 0;
+                    opacity: 1;
+                }
+                30%{
+                    opacity: 0;
+                }
+                100% {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: 35px 0 0 20px;
+                    opacity: 1;
+                }
+            }
+        }
     }
 
     &__name {
