@@ -14,7 +14,7 @@
             :key="item.id"
             :to="item.link"
             @mouseover.native="changeVars(item)"
-            @mouseleave.native="textClass = null"
+            @mouseleave.native="resetVars(item)"
             :class="{'home__links_link--active' : textClass == item.id}">
             
             {{ item.name }}  
@@ -38,6 +38,11 @@ export default {
             this.textClass = item.id;
             this.$store.commit('updateBgClass', item.class);
         },
+        resetVars(item){
+            this.textClass = null;
+            this.homeClass = null;
+            this.$store.commit('updateBgClass', item.class);
+        }
     },
     computed: {
         linkButtons(){

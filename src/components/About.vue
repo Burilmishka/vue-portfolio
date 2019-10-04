@@ -130,7 +130,7 @@ export default {
         },
         {
           year: '2018',
-          name: '«Javascript/FrontEnd» course, The Rolling Scopes School'
+          name: '«JS/FrontEnd» course, The Rolling Scopes School'
         },
       ],
       skillsOne: [
