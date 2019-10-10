@@ -1,5 +1,5 @@
 <template>
-  <div  class="home">
+  <div class="home" @mousemove="cursorDecorator">
     <!-- <div class="home__title">Mike Adutskevich</div> -->
     <div class="home__title">Mike Adutskevich</div>
     <div class="home__description">
@@ -11,15 +11,17 @@
         <router-link    
             v-for="item in linkButtons" 
             class="home__links_link"
-            :key="item.id"
+            :key="`home-link-${item.id}`"
             :to="item.link"
             @mouseover.native="changeVars(item)"
             @mouseleave.native="resetVars(item)"
             :class="{'home__links_link--active' : textClass == item.id}">
-            
-            {{ item.name }}  
+                <div class="home__links_link-line"></div>
+                <div class="home__links_link-text">{{ item.name }}</div>
         </router-link>
     </div>
+    <!-- <div class="cursor" :style="computedStyle"></div> -->
+    <!-- <div>{{ x }}, {{ y }}</div> -->
   </div>
 </template>
 
@@ -30,6 +32,9 @@ export default {
         return {
             textClass: null,
             homeClass: null,
+            x: 'no',
+            y: 'no',
+            computedStyle: '',
         }
     },
     methods: {
@@ -39,10 +44,16 @@ export default {
             this.$store.commit('updateBgClass', item.class);
         },
         resetVars(item){
-            this.textClass = null;
-            this.homeClass = null;
-            this.$store.commit('updateBgClass', item.class);
-        }
+            this.textClass = '';
+            // this.homeClass = '';
+            // this.$store.commit('updateBgClass', this.homeClass);
+            // console.log('bgClass', this.$store.state.mainBgClass.bgClass);
+        },
+        cursorDecorator(event){
+            // this.x = event.pageX;
+            // this.y = event.pageY;
+            // this.computedStyle = `top: ${this.y - 10}px;left: ${this.x - 10}px`;
+        },
     },
     computed: {
         linkButtons(){
@@ -67,6 +78,12 @@ export default {
                 }
             ]
         }
-    }
+    },
+    // mounted () {
+    //     let cursorEl = document.querySelector('.cursor');
+    //     this.cursorEl = cursorEl;
+    //     // console.log(this.cursorEl);
+    //     document.body.addEventListener('mousemove', this.cursorDecorator);
+    // }
 }
 </script>

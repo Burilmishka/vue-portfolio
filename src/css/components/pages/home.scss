@@ -54,6 +54,11 @@
         align-items: center;
         z-index: 0;
 
+        @include mediumPlus{
+            flex-direction: row;
+            overflow: hidden;
+        }
+
         &_link{
             width: 70%;
             margin: 0 auto;
@@ -63,30 +68,71 @@
             align-items: center;
             text-decoration: none;
             font-family: "cond-cond",sans-serif ;
-            font-size: 60px;
+            font-size: 16vw;
             letter-spacing: normal;
             line-height: 100%;
             font-weight: 700;
             transition: all .3s ease;
             color: $textLightG;
 
+            @include medium {
+                font-size: 13vw;
+            }
 
-            &:not(:first-child){
-                &:before{
-                    content: "";
-                    position: relative;
-                    display: block;
-                    width: 80%;
+            @include mediumPlus{
+                font-size: 12vw;
+                flex-direction: row;
+                width: 40vw;
+            }
+
+            &-line{
+                display: none;
+
+                @include mediumPlus{
+                    display: flex;
+                    width: 10vw;
                     height: 1px;
-                    background-color: $textLightG;
-                    margin: 25px 0;
                 }
             }
+
+
+            &:not(:first-child){
+
+                @include mediumPlus{
+                    padding-left: 10vw;
+                }
+            }
+
+            //     &:before{
+            //         content: "";
+            //         position: relative;
+            //         display: block;
+            //         width: 80%;
+            //         height: 1px;
+            //         background-color: $textLightG;
+            //         margin: 25px 0;
+
+            //         @include mediumPlus{
+            //             display: none;
+            //         }
+            //     }
+            // }
 
             &--active {
                 letter-spacing: .2rem;
                 transition: all .3s ease;
             }
         }
+    }
+
+    .cursor {
+        width:30px;
+        height:30px;
+        position:fixed;
+        border-radius:50%;
+        border: 2px solid red;
+        top:50px;
+        left:50px;
+        z-index:500;
     }
 }

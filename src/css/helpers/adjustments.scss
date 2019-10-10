@@ -30,10 +30,16 @@
                 &_link{
                     color: $textCol;
                     transition: all $transitionDel ease-in-out;
-                    &:not(:first-child){
-                        &:before{
+                    // &:not(:first-child){
+                    //     &:before{
+                    //         background-color: $textCol;
+                    //         transition: background-color .2s ease-in-out;
+                    //     }
+                    // }
+
+                    &-line{
+                        @include mediumPlus{
                             background-color: $textCol;
-                            transition: background-color .2s ease-in-out;
                         }
                     }
                 }
